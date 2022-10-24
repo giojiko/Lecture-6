@@ -1,22 +1,157 @@
+body, html {
+    margin:0;
+    height:100%;
+}
 .container {
-    width: 1170px;
-    margin: 0 auto;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/001/928/475/original/cartoon-jungle-landscape-on-snowy-mountains-background-free-vector.jpg");
+    height:100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.relative-box {
-    background-color: yellow;
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
+.position {
     position: relative;
+    height: 100%;
+}
+.lion {
+    z-index: 100;
+    position: absolute;
+    height: 250px;
+    bottom: 25px;
+    left: 350px;
+    animation-name: lion;
+    animation-duration: 6s;
 }
 
-.absolute-box {
-    background-color: red;
-    width: 150px;
-    height: 150px;
+@keyframes lion {
+    0% {left: -500px;}
+    100% {left: 350px}
+}
+
+.cloud {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    animation-name: cloud;
+    animation-delay: 5.8s;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    left: 620px; 
+    bottom: 170px;
+    animation-fill-mode: forwards;
+    z-index: -10;
+}
+
+@keyframes cloud {
+    0% {z-index: -10;}
+    100% {z-index: 10;}
+}
+
+
+.hungry {
+    position: absolute;
+    animation-name: hungry;
+    animation-delay: 5.8s;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    left: 660px; 
+    bottom: 280px;
+    animation-fill-mode: forwards;
+    z-index: -10;
+}
+
+h2 {
+    font-size: 45px;
+    font-weight: bold;
+    color: darkred;
+}
+
+@keyframes hungry {
+    0% {z-index: -10;}
+    100% {z-index: 10;}
+}
+
+.jump {
+    width: 150px;
+    position: absolute;
+    right: 205px;
+    top: 300px;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+}
+
+@keyframes jump {
+    0% {right: 205px; top: 300px;}
+    25% {right: 210px; top: 290px}
+    50% {right: 215px; top: 285px}
+    75% {right: 220px; top: 270px}
+    100% {right: 225px; top: 260px}
+}
+
+.jump:hover {
+    position: absolute;
+    animation-name: jump;
+    animation-duration: 4s;
+}
+
+.chicken {
+    width: 150px;
+    position: absolute;
+    bottom: 60px;
+    right: 600px;
+    animation-name: chicken;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+
+@keyframes chicken {
+    0% {right: 600px; bottom: 60px;}
+    20% {right: 450px; bottom: 90px;}
+    40% {right: 300px; bottom: 70px;}
+    60% {right: 200px; bottom: 90px;}
+    80% {right: 70px; bottom: 60px;}    
+    100% {right: -150px; bottom: 90px;}
+}
+
+.rabit2 {
+    width: 150px;
+    position: absolute;
+    z-index: 1;
+    width: 150px;
+    position: absolute;
+    bottom: 90px;
+    left: 100px;
+    animation-name: rabit2;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+}
+
+@keyframes rabit2 {
+    0% {z-index: 1; opacity: 1;}
+    25% {z-index: 1; opacity: 1;}
+    50% {z-index: 1; opacity: 0.5;}
+    75% {z-index: 1; opacity: 0.5;}
+    100% {z-index: -1; opacity: 0;}
+}
+.rabit1 {
+    z-index: 5;
+    width: 150px;
+    position: absolute;
+    bottom: 135px;
+    left: 400px;
+    animation-name: rabit1;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+    animation-timing-function: linear;
+}
+
+@keyframes rabit1 {
+    0% {left: 400; bottom: 135px;}
+    50% {left: 200px; bottom: 70px;}
+    75% {left: 100px; bottom: 30px;}
+    100% {left: -150px; bottom: -150px;}
 }
